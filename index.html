@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing Layout</title>
+    <link rel="stylesheet" type="text/css" href="test.css" />
+  </head>
+  <body>
+    <script>
+      /* Script untuk menu dropdown di mobile version */
+      function toggleMenu() {
+        var menu = document.getElementById('menu-list');
+        menu.classList.toggle('menu-open');
+      }
+      /* Script untuk menu dropdown di mobile version */
+
+      /* Script untuk merubah menu saat di scroll */
+      function shrinkMenu() {
+        var distanceY = window.pageYOffset;
+        var shrinkOn = 70;
+        var nav = document.getElementById('nav');
+        if (distanceY > shrinkOn) {
+          nav.classList.add('smaller');
+        } else {
+          nav.classList.remove('smaller');
+        }
+      }
+      window.addEventListener('scroll', shrinkMenu);
+      /* Script untuk merubah menu saat di scroll */
+
+      /* Script untuk parallax background di landing screen */
+      function parallax() {
+        var layout1 = document.getElementById('layout1');
+        layout1.style.top = +(window.pageYOffset / 2) + 'px';
+      }
+      window.addEventListener('scroll', parallax);
+      /* Script untuk parallax background di landing screen */
+
+      //ini gagal, jangan dicoba
+      // function parallax(){
+      // 	var wScroll = document.documentElement.scrollTop;
+
+      // 	// document.getElementById("layout3").style.transform = " translate(0px, "+ wScroll / 2 +"%) ";
+      // 	// document.getElementById('layout4').style.top = - (wScroll / 4) + 'px';
+      // }
+      // window.addEventListener("scroll", parallax, false);
+    </script>
+
+    <header id="header">
+      <nav id="nav">
+        <div class="menu-mobile" onclick="toggleMenu();">
+          <div id="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a>Menu</a>
+        </div>
+        <ul id="menu-list">
+          <li><a href="">Home</a></li>
+          <li><a href="">Menu1</a></li>
+          <li><a href="">Menu2</a></li>
+          <li><a href="">Menu3</a></li>
+          <li><a href="">Menu4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="layout1">
+        <h1>Layout Satu</h1>
+      </section>
+
+      <section id="layout2">
+        <article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </article>
+      </section>
+
+      <section id="layout3">
+        <section>
+          <div class="content">
+            <div class="img">
+              <div class="bg-effect green-day"></div>
+              <img
+                src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              />
+            </div>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </article>
+          </div>
+          <div class="content">
+            <div class="img">
+              <div class="bg-effect purple-blue"></div>
+              <img
+                src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              />
+            </div>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </article>
+          </div>
+          <div class="content">
+            <div class="img">
+              <div class="bg-effect gold-orange"></div>
+              <img
+                src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              />
+            </div>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </article>
+          </div>
+          <div class="content">
+            <div class="img">
+              <div class="bg-effect"></div>
+              <img
+                src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              />
+            </div>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </article>
+          </div>
+          <div class="content">
+            <div class="img">
+              <div class="bg-effect"></div>
+              <img
+                src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              />
+            </div>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </article>
+          </div>
+          <div class="content">
+            <div class="img">
+              <div class="bg-effect"></div>
+              <img
+                src="https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              />
+            </div>
+            <article>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
